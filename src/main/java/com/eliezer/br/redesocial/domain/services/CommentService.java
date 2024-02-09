@@ -1,5 +1,7 @@
 package com.eliezer.br.redesocial.domain.services;
 
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.time.LocalDateTime;
 import java.util.Optional;
 import java.util.UUID;
@@ -10,6 +12,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import com.eliezer.br.redesocial.FileStorageProperties;
 import com.eliezer.br.redesocial.domain.DTO.publication.Comment.CommentCreateDTO;
 import com.eliezer.br.redesocial.domain.DTO.publication.Comment.CommentUpdateDTO;
 import com.eliezer.br.redesocial.domain.entitys.entityComment.Comment;
@@ -24,6 +27,7 @@ import jakarta.transaction.Transactional;
 
 @Service
 public class CommentService {
+
     @Autowired
     private TokenJWT tokenJWT;
 
@@ -36,9 +40,7 @@ public class CommentService {
     @Autowired
     private UserProfileRepository userProfileRepository;
 
-    /**
-     * @return
-     */
+    
     @Transactional
     public ResponseEntity<Object> createComment(CommentCreateDTO data){
 
@@ -55,7 +57,7 @@ public class CommentService {
 
       var newComment = new Comment(UUID.randomUUID(),data.content(),LocalDateTime.now(),profile.get(),post.get());
       
-      return ResponseEntity.status(HttpStatus.CREATED).body(commentRepository.save(newComment));
+      return ResponseEntity.status(HttpStatus.CREATED).body("commentRepository.save(newComment)");
     }
 
     @Transactional

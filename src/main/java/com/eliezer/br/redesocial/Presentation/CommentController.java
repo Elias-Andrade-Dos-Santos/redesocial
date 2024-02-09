@@ -24,8 +24,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 @RestController
 @RequestMapping("comment")
 public class CommentController {
+    
     @Autowired
     private CommentService commentService;
+
     @PostMapping
     public ResponseEntity<Object> postMethodName(@RequestBody CommentCreateDTO data) {
         return commentService.createComment(data);

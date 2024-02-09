@@ -39,8 +39,7 @@ public class Publication {
     private UUID id;
 
     private String description;
-    private String videoUrl;
-    private String imageUrl;
+    private String arquivoUrl;
     private boolean ativo;
     
     @Column(name = "creation_date")
@@ -61,24 +60,33 @@ public class Publication {
     private List<Comment> comments;
 
 
-    public Publication(String description, String videoUrl, String imageUrl,LocalDateTime creationDate,UserProfile userProfile, boolean ativo) {
+    public Publication(String description, String arquivoUrl,LocalDateTime creationDate,UserProfile userProfile, boolean ativo) {
             this.description = description;
-            this.videoUrl = videoUrl;
-            this.imageUrl = imageUrl;
+            this.arquivoUrl = arquivoUrl;
             this.creationDate = creationDate;
             this.userProfile = userProfile;
             this.ativo = ativo;
     }
 
 
-    public Publication(UUID randomUUID, String description, String videoUrl, String imageUrl, LocalDateTime creationDate,
+    public Publication(UUID randomUUID, String description, String arquivoUrl, LocalDateTime creationDate,
             UserProfile userProfile,  boolean ativo) {
             this.description = description;
-            this.videoUrl = videoUrl;
-            this.imageUrl = imageUrl;
+            this.arquivoUrl = arquivoUrl;
             this.creationDate = creationDate;
             this.userProfile = userProfile;
             this.ativo = ativo;
         
+    }
+
+
+    public Publication(UUID id, String description, String arquivoUrl,LocalDateTime creationDate) {
+        this.id = id;
+        this.description = description;
+        this.arquivoUrl = arquivoUrl;
+        this.creationDate = creationDate;
+        
+        //TODO Auto-generated constructor stub
+
     }
 }
