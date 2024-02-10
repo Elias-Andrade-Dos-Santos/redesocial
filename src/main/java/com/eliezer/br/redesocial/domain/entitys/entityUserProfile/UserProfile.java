@@ -1,15 +1,21 @@
 package com.eliezer.br.redesocial.domain.entitys.entityUserProfile;
 
+import java.util.HashSet;
 import java.util.UUID;
+import java.util.Set;
 
+import com.eliezer.br.redesocial.domain.entitys.entityAmizade.Amizade;
 import com.eliezer.br.redesocial.domain.entitys.entityUser.User;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
@@ -36,6 +42,9 @@ public class UserProfile  {
     @JoinColumn(name = "user_id")
     @JsonIgnore
     private User user;
+
+    @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private Set<Amizade> amizades = new HashSet<>();
 
     public UserProfile(String profilePictureUrl, String name, int age, User user){
         this.profilePictureUrl = profilePictureUrl;

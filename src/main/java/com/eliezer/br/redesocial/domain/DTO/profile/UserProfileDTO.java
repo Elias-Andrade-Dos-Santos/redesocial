@@ -1,4 +1,4 @@
-package com.eliezer.br.redesocial.domain.DTO;
+package com.eliezer.br.redesocial.domain.DTO.profile;
 
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;

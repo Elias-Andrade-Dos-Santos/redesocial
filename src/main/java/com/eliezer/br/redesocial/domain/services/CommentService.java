@@ -13,8 +13,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import com.eliezer.br.redesocial.FileStorageProperties;
-import com.eliezer.br.redesocial.domain.DTO.publication.Comment.CommentCreateDTO;
-import com.eliezer.br.redesocial.domain.DTO.publication.Comment.CommentUpdateDTO;
+import com.eliezer.br.redesocial.domain.DTO.Comment.CommentCreateDTO;
+import com.eliezer.br.redesocial.domain.DTO.Comment.CommentUpdateDTO;
 import com.eliezer.br.redesocial.domain.entitys.entityComment.Comment;
 import com.eliezer.br.redesocial.domain.entitys.entityPublication.Publication;
 import com.eliezer.br.redesocial.domain.entitys.entityUserProfile.UserProfile;

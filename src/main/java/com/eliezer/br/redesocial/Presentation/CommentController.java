@@ -2,8 +2,8 @@ package com.eliezer.br.redesocial.Presentation;
 
 import org.springframework.web.bind.annotation.RestController;
 
-import com.eliezer.br.redesocial.domain.DTO.publication.Comment.CommentCreateDTO;
-import com.eliezer.br.redesocial.domain.DTO.publication.Comment.CommentUpdateDTO;
+import com.eliezer.br.redesocial.domain.DTO.Comment.CommentCreateDTO;
+import com.eliezer.br.redesocial.domain.DTO.Comment.CommentUpdateDTO;
 import com.eliezer.br.redesocial.domain.services.CommentService;
 
 import org.springframework.web.bind.annotation.RequestMapping;

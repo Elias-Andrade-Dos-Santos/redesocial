@@ -3,8 +3,8 @@ package com.eliezer.br.redesocial.Presentation;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.eliezer.br.redesocial.domain.DTO.UserProfileDTO;
 import com.eliezer.br.redesocial.domain.DTO.UserProfilePutDTO;
+import com.eliezer.br.redesocial.domain.DTO.profile.UserProfileDTO;
 import com.eliezer.br.redesocial.domain.repositories.UserProfileRepository;
 import com.eliezer.br.redesocial.domain.repositories.UserRepository;
 import com.eliezer.br.redesocial.domain.services.UserProfileService;

@@ -1,4 +1,4 @@
-package com.eliezer.br.redesocial.domain.DTO.publication.Comment;
+package com.eliezer.br.redesocial.domain.DTO.Comment;
 
 import java.util.UUID;
 

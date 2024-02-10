@@ -1,7 +1,7 @@
 package com.eliezer.br.redesocial.domain.services;
 
-import com.eliezer.br.redesocial.domain.DTO.UserProfileDTO;
 import com.eliezer.br.redesocial.domain.DTO.UserProfilePutDTO;
+import com.eliezer.br.redesocial.domain.DTO.profile.UserProfileDTO;
 import com.eliezer.br.redesocial.domain.entitys.entityUserProfile.UserProfile;
 import com.eliezer.br.redesocial.domain.repositories.UserProfileRepository;
 import com.eliezer.br.redesocial.infrastructure.security.TokenJWT;
