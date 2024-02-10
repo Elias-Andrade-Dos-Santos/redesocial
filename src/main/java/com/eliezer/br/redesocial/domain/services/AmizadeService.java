@@ -14,7 +14,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import com.eliezer.br.redesocial.domain.entitys.entityAmizade.Amizade;
-import com.eliezer.br.redesocial.domain.entitys.entityPublication.Publication;
 import com.eliezer.br.redesocial.domain.entitys.entityUser.User;
 import com.eliezer.br.redesocial.domain.entitys.entityUserProfile.UserProfile;
 import com.eliezer.br.redesocial.domain.repositories.AmizadeRepository;
